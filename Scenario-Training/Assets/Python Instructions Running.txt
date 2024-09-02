@@ -1,0 +1,10 @@
+Open Cmd from the projects file location and write the following commands to set up the environment:
+
+venv\scripts\activate
+mlagents-learn --run-id=test_1
+
+mlagents-learn --run-id=test_1 --resume
+mlagents-learn config\test.yaml --run-id=test_1
+
+mlagents-learn -h
+Ctrl+C 

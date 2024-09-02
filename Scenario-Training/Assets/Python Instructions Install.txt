@@ -1,0 +1,13 @@
+Open Cmd from the projects file location and write the following commands to set up the environment:
+
+python
+python -m venv venv
+venv\scripts\activate
+python -m pip install pip==23.1.2
+
+pip install mlagents
+pip3 install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+pip install protobuf==3.20.3
+pip install onnx==1.14.0
+
+mlagents-learn -h
