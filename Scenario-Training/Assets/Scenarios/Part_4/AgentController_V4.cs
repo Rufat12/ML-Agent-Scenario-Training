@@ -26,7 +26,7 @@ public class AgentController_V4 : Agent
     [SerializeField] private Material looseMaterial;
     [SerializeField] private Material blankMaterial;
 
-    Coroutine coroutine;
+    private Coroutine coroutine;
 
 
     public override void OnEpisodeBegin()
@@ -88,24 +88,27 @@ public class AgentController_V4 : Agent
             prefabs.Remove(other.gameObject);
             Destroy(other.gameObject);
 
-            Debug.Log("+");
-            AddReward(reward);
+            //AddReward(reward);
 
             if (prefabs.Count == 0)
             {
                 OnClearCoRoutine();
                 coroutine =  StartCoroutine(ColorChange(winMaterial));
+                AddReward((5 - prefabs.Count) * reward);
+                //Debug.Log("Win Collected: " + (5 - prefabs.Count));
                 EndEpisode();
+                Debug.Log("+");
             }
             
         }
         else if (other.gameObject.tag == "Wall")
         {
-            Debug.Log("-");
             AddReward(punishment);
             OnClearCoRoutine();
             coroutine = StartCoroutine(ColorChange(looseMaterial));
+            //Debug.Log("Loose Collected: " + (5 - prefabs.Count));
             EndEpisode();
+            Debug.Log("-");
         }
     }
 

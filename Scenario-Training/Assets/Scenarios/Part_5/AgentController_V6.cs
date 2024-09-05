@@ -27,20 +27,22 @@ public class AgentController_V6 : Agent
     [SerializeField] private Material blankMaterial;
     [SerializeField] private Material timeOutMaterial;
 
-    Coroutine coroutineColor;
-    Coroutine coroutineTimer;
+    private Coroutine coroutineColor;
+    private Coroutine coroutineTimer;
+    private int tempIndex;
 
 
     public override void OnEpisodeBegin()
     {
+        tempIndex = rewardCount;
         transform.localPosition
             = new Vector3(Random.Range(-4f, 4f), 0.25f, Random.Range(-4f, 4f));
 
         OnClearOldRewards();
         OnSpawnRewards();
 
-        coroutineTimer = null;
-
+        if (coroutineTimer != null)
+            StopCoroutine(coroutineTimer);
         coroutineTimer = StartCoroutine(OnStartEpisodeTimer());
     }
 
@@ -127,8 +129,12 @@ public class AgentController_V6 : Agent
             prefabs.Remove(other.gameObject);
             Destroy(other.gameObject);
 
-            Debug.Log("+");
-            AddReward(reward);
+            if (prefabs.Count != tempIndex)
+            {
+                Debug.Log("+");
+                AddReward(reward);
+                tempIndex = prefabs.Count;
+            }
 
             if (prefabs.Count == 0)
             {

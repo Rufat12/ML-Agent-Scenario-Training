@@ -1,0 +1,69 @@
+{
+    "HunterController_V1": {
+        "checkpoints": [
+            {
+                "steps": 499993,
+                "file_path": "results\\Part_6\\HunterController_V1\\HunterController_V1-499993.onnx",
+                "reward": -4.402332361516035,
+                "creation_time": 1725548695.6429973,
+                "auxillary_file_paths": [
+                    "results\\Part_6\\HunterController_V1\\HunterController_V1-499993.pt"
+                ]
+            },
+            {
+                "steps": 500043,
+                "file_path": "results\\Part_6\\HunterController_V1\\HunterController_V1-500043.onnx",
+                "reward": -4.3768115942028984,
+                "creation_time": 1725548695.7950206,
+                "auxillary_file_paths": [
+                    "results\\Part_6\\HunterController_V1\\HunterController_V1-500043.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500043,
+            "file_path": "results\\Part_6\\HunterController_V1.onnx",
+            "reward": -4.3768115942028984,
+            "creation_time": 1725548695.7950206,
+            "auxillary_file_paths": [
+                "results\\Part_6\\HunterController_V1\\HunterController_V1-500043.pt"
+            ]
+        }
+    },
+    "PreyController_V1": {
+        "checkpoints": [
+            {
+                "steps": 499993,
+                "file_path": "results\\Part_6\\PreyController_V1\\PreyController_V1-499993.onnx",
+                "reward": -2.011661807580175,
+                "creation_time": 1725548695.7390127,
+                "auxillary_file_paths": [
+                    "results\\Part_6\\PreyController_V1\\PreyController_V1-499993.pt"
+                ]
+            },
+            {
+                "steps": 500043,
+                "file_path": "results\\Part_6\\PreyController_V1\\PreyController_V1-500043.onnx",
+                "reward": -2.028985507246377,
+                "creation_time": 1725548695.8540192,
+                "auxillary_file_paths": [
+                    "results\\Part_6\\PreyController_V1\\PreyController_V1-500043.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500043,
+            "file_path": "results\\Part_6\\PreyController_V1.onnx",
+            "reward": -2.028985507246377,
+            "creation_time": 1725548695.8540192,
+            "auxillary_file_paths": [
+                "results\\Part_6\\PreyController_V1\\PreyController_V1-500043.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.0.1+cpu"
+    }
+}
